@@ -1,0 +1,9 @@
+D:\MOISES\TRABAJO\METRICA\Examen\WApp-NetCore\WCom-NetCore\bin\Debug\netcoreapp2.1\WCom-NetCore.deps.json
+D:\MOISES\TRABAJO\METRICA\Examen\WApp-NetCore\WCom-NetCore\bin\Debug\netcoreapp2.1\WCom-NetCore.dll
+D:\MOISES\TRABAJO\METRICA\Examen\WApp-NetCore\WCom-NetCore\bin\Debug\netcoreapp2.1\WCom-NetCore.pdb
+D:\MOISES\TRABAJO\METRICA\Examen\WApp-NetCore\WCom-NetCore\obj\Debug\netcoreapp2.1\WCom-NetCore.csprojAssemblyReference.cache
+D:\MOISES\TRABAJO\METRICA\Examen\WApp-NetCore\WCom-NetCore\obj\Debug\netcoreapp2.1\WCom-NetCore.csproj.CoreCompileInputs.cache
+D:\MOISES\TRABAJO\METRICA\Examen\WApp-NetCore\WCom-NetCore\obj\Debug\netcoreapp2.1\WCom-NetCore.AssemblyInfoInputs.cache
+D:\MOISES\TRABAJO\METRICA\Examen\WApp-NetCore\WCom-NetCore\obj\Debug\netcoreapp2.1\WCom-NetCore.AssemblyInfo.cs
+D:\MOISES\TRABAJO\METRICA\Examen\WApp-NetCore\WCom-NetCore\obj\Debug\netcoreapp2.1\WCom-NetCore.dll
+D:\MOISES\TRABAJO\METRICA\Examen\WApp-NetCore\WCom-NetCore\obj\Debug\netcoreapp2.1\WCom-NetCore.pdb
