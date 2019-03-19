@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace WApp_NetCore_v2.Models
 {
-    public class BancoDA
+    public class BancoDataAccess
     {
         //string connectionString = "Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=myTestDB;Data Source=ANKIT-HP\\SQLEXPRESS";
         string connectionString = "Server=CHPROV177-027\\SQL2014EX;Database=DB_Comercio;User ID=sa;Password=moises.dev";
 
         //To View all Bancos details
-        public IEnumerable<Banco> GetAllBancos()
+        public List<Banco> GetAllBancos()
         {
             try
             {
@@ -21,7 +21,7 @@ namespace WApp_NetCore_v2.Models
 
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    SqlCommand cmd = new SqlCommand("spGetAllBancos", con);
+                    SqlCommand cmd = new SqlCommand("PA_Banco_LISTAR_All", con);
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     con.Open();
@@ -55,7 +55,7 @@ namespace WApp_NetCore_v2.Models
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    SqlCommand cmd = new SqlCommand("spAddBanco", con);
+                    SqlCommand cmd = new SqlCommand("PA_Banco_INSERTAR", con);
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     cmd.Parameters.AddWithValue("@nombre", _Banco.nombre);
@@ -81,10 +81,10 @@ namespace WApp_NetCore_v2.Models
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    SqlCommand cmd = new SqlCommand("spUpdateBanco", con);
+                    SqlCommand cmd = new SqlCommand("PA_Banco_ACTUALIZAR", con);
                     cmd.CommandType = CommandType.StoredProcedure;
 
-                    cmd.Parameters.AddWithValue("@EmpId", _Banco.ID);
+                    cmd.Parameters.AddWithValue("@ID", _Banco.ID);
                     cmd.Parameters.AddWithValue("@nombre", _Banco.nombre);
                     cmd.Parameters.AddWithValue("@direccion", _Banco.direccion);
                     cmd.Parameters.AddWithValue("@fecha_registro", _Banco.fecha_registro);
@@ -139,7 +139,7 @@ namespace WApp_NetCore_v2.Models
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    SqlCommand cmd = new SqlCommand("spDeleteBanco", con);
+                    SqlCommand cmd = new SqlCommand("PA_Banco_ELIMINAR", con);
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     cmd.Parameters.AddWithValue("@ID", id);

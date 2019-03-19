@@ -12,6 +12,6 @@ namespace WApp_NetCore_v2.Models
         public decimal monto { get; set; }
         public string moneda { get; set; }
         public string estado { get; set; }
-        public DateTime fecha_registro { get; set; }
+        public DateTime fecha_pago { get; set; }
     }
 }

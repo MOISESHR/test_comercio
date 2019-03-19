@@ -32,18 +32,20 @@ namespace WApp_NetCore_v2.Controllers
         {
             if (User.Identity.IsAuthenticated)
             {
-                var verifi = await _roleManager.FindByNameAsync("Administrador");
+                string NombreRol = "Administrador";
+
+                var verifi = await _roleManager.FindByNameAsync(NombreRol);
                 if (verifi != null)
                 {
 
                 }
                 else
                 {
-                    var res = await _roleManager.CreateAsync(new IdentityRole("Administrador"));
+                    var res = await _roleManager.CreateAsync(new IdentityRole(NombreRol));
                     if (res.Succeeded)
                     {
                         var user = await _userManager.GetUserAsync(HttpContext.User);
-                        await _userManager.AddToRoleAsync(user, "Administrador");
+                        await _userManager.AddToRoleAsync(user, NombreRol);
                     }
                 }
             }

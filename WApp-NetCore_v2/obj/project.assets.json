@@ -13653,9 +13653,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\mhr\\METRICA\\Examen\\WApp-NetCore_v2\\WApp-NetCore_v2\\WApp-NetCore_v2.csproj",
-      "projectName": "WApp-NetCore_v2",
-      "projectPath": "E:\\mhr\\METRICA\\Examen\\WApp-NetCore_v2\\WApp-NetCore_v2\\WApp-NetCore_v2.csproj",
+      "projectUniqueName": "E:\\mhr\\METRICA\\Examen\\WApp-NetCore_v2\\WApp-NetCore_v2\\WApp_NetCore_v2.csproj",
+      "projectName": "WApp_NetCore_v2",
+      "projectPath": "E:\\mhr\\METRICA\\Examen\\WApp-NetCore_v2\\WApp-NetCore_v2\\WApp_NetCore_v2.csproj",
       "packagesPath": "C:\\Users\\usrprdsolnegmo\\.nuget\\packages\\",
       "outputPath": "E:\\mhr\\METRICA\\Examen\\WApp-NetCore_v2\\WApp-NetCore_v2\\obj\\",
       "projectStyle": "PackageReference",
