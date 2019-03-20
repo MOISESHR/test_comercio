@@ -196,6 +196,8 @@ namespace WApp_NetCore_v2.Models.DataAccess
             SqlConnection oConexion = new SqlConnection(ConexionData.DB_Comercio());
             SqlCommand cmd = new SqlCommand("PA_OrdenPago_LISTAR", oConexion);
             cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@sucursal_id", SqlDbType.Int).Value = oBE.sucursal_id;
+            cmd.Parameters.Add("@moneda", SqlDbType.VarChar, 10).Value = oBE.moneda;
             List<OrdenPago> lista = new List<OrdenPago>();
             try
             {

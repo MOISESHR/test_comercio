@@ -13,7 +13,7 @@ using WApp_NetCore_v2.Data;
 
 namespace WApp_NetCore_v2.Controllers
 {
-    [Authorize(Roles = "Administrador")]
+    [Authorize(Roles = "Administrador,Operador1")]
     public class BancoController : Controller
     {
         private readonly ComercioDbContext _context;
@@ -55,30 +55,32 @@ namespace WApp_NetCore_v2.Controllers
             }
                 
         }
-
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Registro([Bind("ID,nombre,direccion,fecha_registro")] Banco _banco)
+        public IActionResult Registro([Bind("ID,nombre,direccion,fecha_registro")] Banco _banco)
         {
             if (ModelState.IsValid)
             {
+                BancoDataAccess objDA = new BancoDataAccess();
+                Banco result = new Banco();
+
+                int res = 0;
                 if (_banco.ID == 0)
-                    _context.Add(_banco);
+                    res = objDA.Registrar(_banco);
                 else
-                    _context.Update(_banco);
-                await _context.SaveChangesAsync();
+                    res = objDA.Actualizar(_banco);
                 return RedirectToAction(nameof(Index));
             }
             return View(_banco);
         }
-        public async Task<IActionResult> Eliminar(int? id)
+        public IActionResult Eliminar(int id)
         {
             try
             {
                 // TODO: Add delete logic here
-                var _banco =await _context.Bancos.FindAsync(id);
-                _context.Bancos.Remove(_banco);
-                await _context.SaveChangesAsync();
+                BancoDataAccess objDA = new BancoDataAccess();
+                var res = objDA.Eliminar(id);
+
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -86,6 +88,37 @@ namespace WApp_NetCore_v2.Controllers
                 return View();
             }
         }
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> Registro([Bind("ID,nombre,direccion,fecha_registro")] Banco _banco)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        if (_banco.ID == 0)
+        //            _context.Add(_banco);
+        //        else
+        //            _context.Update(_banco);
+        //        await _context.SaveChangesAsync();
+        //        return RedirectToAction(nameof(Index));
+        //    }
+        //    return View(_banco);
+        //}
+        
+        //public async Task<IActionResult> Eliminar(int? id)
+        //{
+        //    try
+        //    {
+        //        // TODO: Add delete logic here
+        //        var _banco =await _context.Bancos.FindAsync(id);
+        //        _context.Bancos.Remove(_banco);
+        //        await _context.SaveChangesAsync();
+        //        return RedirectToAction(nameof(Index));
+        //    }
+        //    catch
+        //    {
+        //        return View();
+        //    }
+        //}
 
 
         // // GET: Banco

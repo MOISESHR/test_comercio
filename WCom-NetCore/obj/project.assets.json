@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\mhr\\METRICA\\Examen\\WApp-NetCore_v2\\WCom-NetCore\\WCom-NetCore.csproj",
+      "projectUniqueName": "E:\\mhr\\METRICA\\Examen\\test_comercio\\test_comercio\\WCom-NetCore\\WCom-NetCore.csproj",
       "projectName": "WCom-NetCore",
-      "projectPath": "E:\\mhr\\METRICA\\Examen\\WApp-NetCore_v2\\WCom-NetCore\\WCom-NetCore.csproj",
+      "projectPath": "E:\\mhr\\METRICA\\Examen\\test_comercio\\test_comercio\\WCom-NetCore\\WCom-NetCore.csproj",
       "packagesPath": "C:\\Users\\usrprdsolnegmo\\.nuget\\packages\\",
-      "outputPath": "E:\\mhr\\METRICA\\Examen\\WApp-NetCore_v2\\WCom-NetCore\\obj\\",
+      "outputPath": "E:\\mhr\\METRICA\\Examen\\test_comercio\\test_comercio\\WCom-NetCore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

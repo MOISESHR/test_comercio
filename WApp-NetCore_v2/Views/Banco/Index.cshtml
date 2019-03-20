@@ -3,12 +3,13 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<hr />
 <h2>Registro Bancos</h2>
 <hr />
 <p>
     Ingrese al modulo
-    <a asp-controller="Banco" asp-action="Create">Agregar Nuevo</a>
+    @*<a asp-controller="Banco" asp-action="Create">Agregar Nuevo</a>*@
+    <a asp-action="Registro" class="btn btn-success"><i class="far fa-plus-square"></i> Adicionar Banco</a>
 </p>
 <table class="table table-hover">
     <thead>
@@ -26,7 +27,7 @@
                 @Html.DisplayNameFor(model => model.fecha_registro)
             </th>
             <th>
-                <a asp-action="Registro" class="btn btn-outline-success"><i class="far fa-plus-square"></i> Banco</a>
+                
             </th>
         </tr>
     </thead>

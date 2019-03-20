@@ -14,5 +14,8 @@ namespace WApp_NetCore_v2.Data
         }
 
         public DbSet<Banco> Bancos { get; set; }
+        public DbSet<Sucursales> Sucursales { get; set; }
+        public DbSet<OrdenPago> OrdenPago { get; set; }
+
     }
 }

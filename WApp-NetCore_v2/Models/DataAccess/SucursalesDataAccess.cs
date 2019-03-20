@@ -188,6 +188,8 @@ namespace WApp_NetCore_v2.Models.DataAccess
             SqlConnection oConexion = new SqlConnection(ConexionData.DB_Comercio());
             SqlCommand cmd = new SqlCommand("PA_Sucursales_LISTAR", oConexion);
             cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@banco_id", SqlDbType.Int).Value = oBE.banco_id;
+            cmd.Parameters.Add("@nombre", SqlDbType.VarChar, 50).Value = oBE.nombre;
             List<Sucursales> lista = new List<Sucursales>();
             try
             {
