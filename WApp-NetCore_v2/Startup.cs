@@ -29,7 +29,21 @@ namespace WApp_NetCore_v2
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddIdentity<ApplicationUser, IdentityRole>()
+            services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+                {
+                    options.Lockout.MaxFailedAccessAttempts = 6;
+
+                    options.Password.RequiredLength = 6;
+                    options.Password.RequiredUniqueChars = 3;
+                    options.Password.RequireLowercase = false;
+                    options.Password.RequireNonAlphanumeric = false;
+                    options.Password.RequireUppercase = false;
+
+                    //options.Lockout.DefaultLockoutTimeSpan;		//Default 5m
+
+                    options.User.RequireUniqueEmail = true;
+
+            })
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
@@ -37,6 +51,10 @@ namespace WApp_NetCore_v2
             services.AddTransient<IEmailSender, EmailSender>();
 
             services.AddMvc();
+            //Base de datos DB_MHR_Comercio
+            services.AddDbContext<ComercioDbContext>(options =>             
+                options.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

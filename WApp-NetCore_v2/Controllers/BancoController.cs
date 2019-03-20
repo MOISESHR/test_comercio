@@ -5,24 +5,98 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using WApp_NetCore_v2.Models;
+using WApp_NetCore_v2.Models.DataAccess;
+using WApp_NetCore_v2.Data;
 
 namespace WApp_NetCore_v2.Controllers
 {
     [Authorize(Roles = "Administrador")]
     public class BancoController : Controller
     {
+        private readonly ComercioDbContext _context;
+        public BancoController(ComercioDbContext context)
+        {
+            _context = context;
+        }
+
         // GET: Banco
         public ActionResult Index()
         {
-            List<Banco> lista = new List<Banco>();
+            //var result = await _context.Bancos.ToListAsync();
+
             BancoDataAccess objDA = new BancoDataAccess();
-            lista= objDA.GetAllBancos();
+            List<Banco> result = new List<Banco>();
+            result = objDA.ListarAll();
 
-
-
-            return View();
+            return View(result);
         }
+
+        // GET: Banco/Create
+        public IActionResult Registro(int id = 0)
+        {
+            if (id == 0)
+                return View(new Banco());
+            else
+            {
+                BancoDataAccess objDA = new BancoDataAccess();
+                Banco result = new Banco();
+                result = objDA.GetReg(id);
+                if (result == null)
+                {
+                    return View(new Banco());
+                }
+                else
+                {
+                    return View(result);
+                }
+            }
+                
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Registro([Bind("ID,nombre,direccion,fecha_registro")] Banco _banco)
+        {
+            if (ModelState.IsValid)
+            {
+                if (_banco.ID == 0)
+                    _context.Add(_banco);
+                else
+                    _context.Update(_banco);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(_banco);
+        }
+        public async Task<IActionResult> Eliminar(int? id)
+        {
+            try
+            {
+                // TODO: Add delete logic here
+                var _banco =await _context.Bancos.FindAsync(id);
+                _context.Bancos.Remove(_banco);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+
+        // // GET: Banco
+        // public ActionResult Index()
+        // {
+        //     List<Banco> lista = new List<Banco>();
+        //     BancoDataAccess objDA = new BancoDataAccess();
+        //     lista= objDA.GetAllBancos();
+
+        //     return View();
+        // }
 
         // GET: Banco/Details/5
         public ActionResult Details(int id)
@@ -77,7 +151,7 @@ namespace WApp_NetCore_v2.Controllers
                     fecha_registro = DateTime.Now
                 };
 
-                var result = new BancoDataAccess().AddBanco(oBE);
+                var result = new BancoDataAccess().Registrar(oBE);
 
 
                 return RedirectToAction(nameof(Index));
