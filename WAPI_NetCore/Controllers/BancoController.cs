@@ -14,14 +14,20 @@ namespace WAPI_NetCore.Controllers
     public class BancoController : Controller
     {
         // GET: api/Banco
-        [HttpGet]
+        [HttpGet("ListarAll")]
         public IEnumerable<Banco> Get()
         {
             return new BancoLogic().ListarAll();
         }
 
+        [HttpGet("Listar")]
+        public IEnumerable<Banco> Listar([FromBody]Banco datos)
+        {
+            return new BancoLogic().Listar(datos);
+        }
+
         // GET: api/Banco/5
-        [HttpGet("GetBanco/{id}", Name = "GetBanco")]
+        [HttpGet("GetReg/{id}")]
         public Banco Get(int id)
         {
             return new BancoLogic().GetReg(id);
@@ -42,7 +48,7 @@ namespace WAPI_NetCore.Controllers
         }
         
         // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
+        [HttpDelete("Eliminar/{id}")]
         public int Delete(int id)
         {
             return BancoLogic.Eliminar(id);
