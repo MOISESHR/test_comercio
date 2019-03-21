@@ -14,15 +14,14 @@ namespace WAPI_NetCore.Controllers
     public class SucursalesController : Controller
     {
         // GET: api/Sucursales
-        [HttpGet]
-        public IEnumerable<string> Get()
+        [HttpGet("ListarAll")]
+        public IEnumerable<Sucursales> Get()
         {
-            return new string[] { "Probar con ", "api/Sucursales/2" };
+            return new SucursalesLogic().ListarAll();
         }
 
         // GET: api/Sucursales/4
-        [Route("ListarPorBanco")]
-        [HttpGet("{id}")]
+        [HttpGet("ListarPorBanco/{id}")]
         public IEnumerable<Sucursales> ListarPorBanco([FromRoute] int id)
         {
             List<Sucursales> olist = new List<Sucursales>();
@@ -34,29 +33,39 @@ namespace WAPI_NetCore.Controllers
             return olist;
         }
 
-        //// GET: api/Sucursales/5
-        //[HttpGet("{id}", Name = "Get")]
-        //public string Get(int id)
-        //{
-        //    return "value";
-        //}
-        
+        [HttpGet("Listar")]
+        public IEnumerable<Sucursales> Listar([FromBody]Sucursales datos)
+        {
+            return new SucursalesLogic().Listar(datos);
+        }
+
+        // GET: api/Sucursales/5
+        [HttpGet("GetReg/{id}", Name = "Get")]
+        public Sucursales Get(int id)
+        {
+            return new SucursalesLogic().GetReg(id);
+        }
+
         // POST: api/Sucursales
         [HttpPost]
-        public void Post([FromBody]string value)
+        [HttpPost("Registrar")]
+        public int Post([FromBody]Sucursales datos)
         {
+            return SucursalesLogic.Registrar(datos);
         }
-        
+
         // PUT: api/Sucursales/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+        [HttpPut("Actualizar")]
+        public int Put([FromBody]Sucursales datos)
         {
+            return SucursalesLogic.Actualizar(datos);
         }
-        
+
         // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpDelete("Eliminar/{id}")]
+        public int Delete(int id)
         {
+            return SucursalesLogic.Eliminar(id);
         }
     }
 }

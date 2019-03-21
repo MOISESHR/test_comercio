@@ -14,13 +14,13 @@ namespace WAPI_NetCore.Controllers
     public class OrdenPagoController : Controller
     {
         // GET: api/OrdenPago
-        [HttpGet]
-        public IEnumerable<string> Get()
+        [HttpGet("ListarAll")]
+        public IEnumerable<OrdenPago> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new OrdenPagoLogic().ListarAll();
         }
 
-        // GET: api/OrdenPago/1/Soles
+        // GET: api/OrdenPago/TotalOrdenes/1/Soles
         [Route("TotalOrdenes/{sucursal_id}/{moneda}")]
         [HttpGet]
         public IEnumerable<OrdenPago> Get(int sucursal_id, string moneda)
@@ -33,29 +33,38 @@ namespace WAPI_NetCore.Controllers
             return oList;
         }
 
-        // GET: api/OrdenPago/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        [HttpGet("Listar")]
+        public IEnumerable<OrdenPago> Listar([FromBody]OrdenPago datos)
         {
-            return "value";
+            return new OrdenPagoLogic().Listar(datos);
         }
-        
-        // POST: api/OrdenPago
-        [HttpPost]
-        public void Post([FromBody]string value)
+
+        // GET: api/OrdenPago/5
+        [HttpGet("GetReg/{id}")]
+        public OrdenPago Get(int id)
         {
+            return new OrdenPagoLogic().GetReg(id);
+        }
+
+        // POST: api/OrdenPago
+        [HttpPost("Registrar")]
+        public int Post([FromBody]OrdenPago datos)
+        {
+            return OrdenPagoLogic.Registrar(datos);
         }
         
         // PUT: api/OrdenPago/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+        [HttpPut("Actualizar")]
+        public int Put([FromBody]OrdenPago datos)
         {
+            return OrdenPagoLogic.Actualizar(datos);
         }
         
         // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpDelete("Eliminar/{id}")]
+        public int Delete(int id)
         {
+            return OrdenPagoLogic.Eliminar(id);
         }
     }
 }
