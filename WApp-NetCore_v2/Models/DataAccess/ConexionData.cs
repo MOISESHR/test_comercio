@@ -16,7 +16,7 @@ namespace WApp_NetCore_v2.Models.DataAccess
 
         public static string DB_Comercio()
         {
-            string connectionString = "Server=CHPROV177-027\\SQL2014EX;Database=DB_MHR_Comercio;User ID=sa;Password=moises.dev";
+            string connectionString = "Server=DESKTOP-9QOH40S\\SQL2014;Database=DB_MHR_Comercio;User ID=sa;Password=moises.dev";
             //return ConfigurationManager.ConnectionStrings["dddd"].ConnectionString;
             return connectionString;
         }
