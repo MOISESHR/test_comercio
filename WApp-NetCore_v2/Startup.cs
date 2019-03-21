@@ -40,6 +40,7 @@ namespace WApp_NetCore_v2
                     options.Password.RequireUppercase = false;
 
                     options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);		//TIEMPO DURACION 5 minutos
+                    //options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromSeconds(5);		//TIEMPO DURACION 5 minutos
 
                     options.User.RequireUniqueEmail = true;
 

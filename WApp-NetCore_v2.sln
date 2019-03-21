@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.28307.489
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WApp_NetCore_v2", "WApp-NetCore_v2\WApp_NetCore_v2.csproj", "{671C8408-EFB2-4A70-9376-A8A4CD5F9BCC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DC8F890F-B235-4982-8E6E-5A6810CCB8E1} = {DC8F890F-B235-4982-8E6E-5A6810CCB8E1}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WCom-NetCore", "WCom-NetCore\WCom-NetCore.csproj", "{1CD198B9-9800-4490-91E0-665C6F2D7B5A}"
 EndProject
