@@ -5,31 +5,60 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using WApp_NetCore_v2.Models;
-using WApp_NetCore_v2.Models.DataAccess;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using WApp_NetCore_v2.Data;
+//using WApp_NetCore_v2.Models;
+//using WApp_NetCore_v2.Models.DataAccess;
+using WBE_NetCore.Models;
+using WBL_NetCore.Logic;
 
 namespace WApp_NetCore_v2.Controllers
 {
     [Authorize(Roles = "Administrador,Operador1")]
     public class SucursalesController : Controller
     {
+        private readonly ComercioDbContext _context;
+
+        public SucursalesController(ComercioDbContext context)
+        {
+            _context = context;
+        }
+
         // GET: Sucursales        
         public ActionResult Index()
         {
-            SucursalesDataAccess objDA = new SucursalesDataAccess();
+            SucursalesLogic objDA = new SucursalesLogic();
             List<Sucursales> result = new List<Sucursales>();
             result = objDA.ListarAll();
 
             return View(result);
         }
         // GET: Banco/Create
-        public IActionResult Registro(int id = 0)
+        public async Task<IActionResult> Registro(int id = 0)
         {
+            List<SelectListItem> ListBancos = new List<SelectListItem>();
+            ListBancos.Add(new SelectListItem
+            {
+                Text = "Selecciona",
+                Value = ""
+            });
+            var lista = await _context.Banco.ToListAsync();
+            foreach (var item in lista)
+            {
+                ListBancos.Add(new SelectListItem
+                {
+                    Text = item.nombre,
+                    Value = item.ID.ToString()
+                });
+            }
+            ViewBag.ListBancos = ListBancos;
+
             if (id == 0)
                 return View(new Sucursales());
             else
             {
-                SucursalesDataAccess objDA = new SucursalesDataAccess();
+                SucursalesLogic objDA = new SucursalesLogic();
                 Sucursales result = new Sucursales();
                 result = objDA.GetReg(id);
                 if (result == null)
@@ -49,14 +78,13 @@ namespace WApp_NetCore_v2.Controllers
         {
             if (ModelState.IsValid)
             {
-                SucursalesDataAccess objDA = new SucursalesDataAccess();
                 Sucursales result = new Sucursales();
 
                 int res = 0;
                 if (_banco.ID == 0)
-                    res = objDA.Registrar(_banco);
+                    res = SucursalesLogic.Registrar(_banco);
                 else
-                    res = objDA.Actualizar(_banco);
+                    res = SucursalesLogic.Actualizar(_banco);
                 return RedirectToAction(nameof(Index));
             }
             return View(_banco);
@@ -66,8 +94,7 @@ namespace WApp_NetCore_v2.Controllers
             try
             {
                 // TODO: Add delete logic here
-                SucursalesDataAccess objDA = new SucursalesDataAccess();
-                var res = objDA.Eliminar(id);
+                var res = SucursalesLogic.Eliminar(id);
 
                 return RedirectToAction(nameof(Index));
             }

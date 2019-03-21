@@ -4,8 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using WApp_NetCore_v2.Models;
-using WApp_NetCore_v2.Models.DataAccess;
+//using WApp_NetCore_v2.Models;
+//using WApp_NetCore_v2.Models.DataAccess;
+using WBE_NetCore.Models;
+using WBL_NetCore.Logic;
 
 namespace WApp_NetCore_v2.Services.ApiController
 {
@@ -24,7 +26,7 @@ namespace WApp_NetCore_v2.Services.ApiController
         [HttpGet]
         public IEnumerable<OrdenPago> Get(int sucursal_id, string moneda)
         {
-            OrdenPagoDataAccess oDa = new OrdenPagoDataAccess();
+            OrdenPagoLogic oDa = new OrdenPagoLogic();
             List<OrdenPago> oList = new List<OrdenPago>();
 
             oList = oDa.Listar(new OrdenPago() { sucursal_id = sucursal_id, moneda = moneda });
@@ -35,7 +37,7 @@ namespace WApp_NetCore_v2.Services.ApiController
         //[HttpGet]
         //public IEnumerable<OrdenPago> Lista([FromBody]OrdenPago item)
         //{
-        //    OrdenPagoDataAccess oDa = new OrdenPagoDataAccess();
+        //    OrdenPagoLogic oDa = new OrdenPagoLogic();
         //    List<OrdenPago> oList = new List<OrdenPago>();
 
         //    oList = oDa.Listar(new OrdenPago() { sucursal_id = item.sucursal_id, moneda = item.moneda});

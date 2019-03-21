@@ -1,38 +1,42 @@
-﻿@model IEnumerable<WApp_NetCore_v2.Models.OrdenPago>
+﻿@model IEnumerable<WBE_NetCore.Models.OrdenPago>
 
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
-
+<hr />
+<h2>Registro de Orden de Pagos</h2>
+<hr />
 <p>
-    <a asp-action="Create">Create New</a>
+    Ingrese al modulo
+    @*<a asp-controller="Banco" asp-action="Create">Agregar Nuevo</a>*@
+    <a asp-action="Registro" class="btn btn-success"><i class="far fa-plus-square"></i> Adicionar Ordenes de Pago</a>
 </p>
-<table class="table">
+<table class="table table-hover">
     <thead>
         <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.sucursal_id)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.monto)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.moneda)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.estado)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.fecha_pago)
-                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.sucursal_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.monto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.moneda)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.estado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fecha_pago)
+            </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+        @foreach (var item in Model)
+        {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.sucursal_id)
@@ -50,11 +54,10 @@
                 @Html.DisplayFor(modelItem => item.fecha_pago)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                <a asp-action="Registro" asp-route-id="@item.ID"><i class="fa fa-marker fa-lg"></i></a>
+                <a asp-action="Eliminar" asp-route-id="@item.ID" class="text-danger ml-1" onclick="return confirm('¿Esta seguro que desea eliminar el registro?')"><i class="fa fa-trash-alt fa-lg"></i></a>
             </td>
         </tr>
-}
+        }
     </tbody>
 </table>

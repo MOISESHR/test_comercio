@@ -34,3 +34,10 @@ E:\mhr\METRICA\Examen\test_comercio\test_comercio\WApp-NetCore_v2\obj\Debug\netc
 E:\mhr\METRICA\Examen\test_comercio\test_comercio\WApp-NetCore_v2\obj\Debug\netcoreapp2.0\WApp_NetCore_v2.AssemblyInfo.cs
 E:\mhr\METRICA\Examen\test_comercio\test_comercio\WApp-NetCore_v2\obj\Debug\netcoreapp2.0\WApp_NetCore_v2.dll
 E:\mhr\METRICA\Examen\test_comercio\test_comercio\WApp-NetCore_v2\obj\Debug\netcoreapp2.0\WApp_NetCore_v2.pdb
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\WApp-NetCore_v2\bin\Debug\netcoreapp2.0\WBE_NetCore.dll
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\WApp-NetCore_v2\bin\Debug\netcoreapp2.0\WBL_NetCore.dll
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\WApp-NetCore_v2\bin\Debug\netcoreapp2.0\WDA_NetCore.dll
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\WApp-NetCore_v2\bin\Debug\netcoreapp2.0\WBE_NetCore.pdb
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\WApp-NetCore_v2\bin\Debug\netcoreapp2.0\WBL_NetCore.pdb
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\WApp-NetCore_v2\bin\Debug\netcoreapp2.0\WDA_NetCore.pdb
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\WApp-NetCore_v2\obj\Debug\netcoreapp2.0\WApp_NetCore_v2.csproj.CopyComplete

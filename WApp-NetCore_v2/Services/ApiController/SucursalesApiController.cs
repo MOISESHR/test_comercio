@@ -6,8 +6,10 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WApp_NetCore_v2.Data;
-using WApp_NetCore_v2.Models;
-using WApp_NetCore_v2.Models.DataAccess;
+//using WApp_NetCore_v2.Models;
+//using WApp_NetCore_v2.Models.DataAccess;
+using WBE_NetCore.Models;
+using WBL_NetCore.Logic;
 
 namespace WApp_NetCore_v2.Services.ApiController
 {
@@ -36,7 +38,7 @@ namespace WApp_NetCore_v2.Services.ApiController
             List<Sucursales> olist = new List<Sucursales>();
             Sucursales oBe = new Sucursales();
             oBe.nombre = nombre;
-            SucursalesDataAccess objDA = new SucursalesDataAccess();
+            SucursalesLogic objDA = new SucursalesLogic();
             olist = objDA.Listar(oBe);
 
             return olist;
@@ -49,7 +51,7 @@ namespace WApp_NetCore_v2.Services.ApiController
             List<Sucursales> olist = new List<Sucursales>();
             Sucursales oBe = new Sucursales();
             oBe.banco_id = id;
-            SucursalesDataAccess objDA = new SucursalesDataAccess();
+            SucursalesLogic objDA = new SucursalesLogic();
             olist = objDA.Listar(oBe);
 
             return olist;

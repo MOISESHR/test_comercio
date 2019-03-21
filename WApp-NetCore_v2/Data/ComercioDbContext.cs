@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using WApp_NetCore_v2.Models;
+using WBE_NetCore.Models;
 
 namespace WApp_NetCore_v2.Data
 {
@@ -13,7 +13,7 @@ namespace WApp_NetCore_v2.Data
         {
         }
 
-        public DbSet<Banco> Bancos { get; set; }
+        public DbSet<Banco> Banco { get; set; }
         public DbSet<Sucursales> Sucursales { get; set; }
         public DbSet<OrdenPago> OrdenPago { get; set; }
 

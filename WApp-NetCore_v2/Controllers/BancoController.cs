@@ -7,27 +7,29 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using WApp_NetCore_v2.Models;
-using WApp_NetCore_v2.Models.DataAccess;
-using WApp_NetCore_v2.Data;
+//using WApp_NetCore_v2.Models;
+//using WApp_NetCore_v2.Models.DataAccess;
+//using WApp_NetCore_v2.Data;
+using WBE_NetCore.Models;
+using WBL_NetCore.Logic;
+using WDA_NetCore.DataAccess;
 
 namespace WApp_NetCore_v2.Controllers
 {
     [Authorize(Roles = "Administrador,Operador1")]
     public class BancoController : Controller
     {
-        private readonly ComercioDbContext _context;
-        public BancoController(ComercioDbContext context)
-        {
-            _context = context;
-        }
+        //private readonly ComercioDbContext _context;
+        //public BancoController(ComercioDbContext context)
+        //{
+        //    _context = context;
+        //}
 
         // GET: Banco
         public ActionResult Index()
         {
             //var result = await _context.Bancos.ToListAsync();
-
-            BancoDataAccess objDA = new BancoDataAccess();
+            BancoLogic objDA = new BancoLogic();
             List<Banco> result = new List<Banco>();
             result = objDA.ListarAll();
 
@@ -41,7 +43,7 @@ namespace WApp_NetCore_v2.Controllers
                 return View(new Banco());
             else
             {
-                BancoDataAccess objDA = new BancoDataAccess();
+                BancoLogic objDA = new BancoLogic();
                 Banco result = new Banco();
                 result = objDA.GetReg(id);
                 if (result == null)
@@ -61,14 +63,13 @@ namespace WApp_NetCore_v2.Controllers
         {
             if (ModelState.IsValid)
             {
-                BancoDataAccess objDA = new BancoDataAccess();
                 Banco result = new Banco();
 
                 int res = 0;
                 if (_banco.ID == 0)
-                    res = objDA.Registrar(_banco);
+                    res = BancoLogic.Registrar(_banco);
                 else
-                    res = objDA.Actualizar(_banco);
+                    res = BancoLogic.Actualizar(_banco);
                 return RedirectToAction(nameof(Index));
             }
             return View(_banco);
@@ -78,8 +79,8 @@ namespace WApp_NetCore_v2.Controllers
             try
             {
                 // TODO: Add delete logic here
-                BancoDataAccess objDA = new BancoDataAccess();
-                var res = objDA.Eliminar(id);
+                BancoLogic objDA = new BancoLogic();
+                var res = BancoLogic.Eliminar(id);
 
                 return RedirectToAction(nameof(Index));
             }
@@ -125,7 +126,7 @@ namespace WApp_NetCore_v2.Controllers
         // public ActionResult Index()
         // {
         //     List<Banco> lista = new List<Banco>();
-        //     BancoDataAccess objDA = new BancoDataAccess();
+        //     BancoLogic objDA = new BancoLogic();
         //     lista= objDA.GetAllBancos();
 
         //     return View();
@@ -184,7 +185,7 @@ namespace WApp_NetCore_v2.Controllers
                     fecha_registro = DateTime.Now
                 };
 
-                var result = new BancoDataAccess().Registrar(oBE);
+                var result = BancoLogic.Registrar(oBE);
 
 
                 return RedirectToAction(nameof(Index));

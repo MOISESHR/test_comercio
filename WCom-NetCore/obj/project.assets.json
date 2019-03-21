@@ -688,23 +688,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\MOISESHR\\.nuget\\packages\\": {},
+    "C:\\Users\\usrprdsolnegmo\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MOISES\\TRABAJO\\METRICA\\Examen\\test_comercio\\test_comercio\\WCom-NetCore\\WCom-NetCore.csproj",
+      "projectUniqueName": "E:\\mhr\\METRICA\\Examen\\test_comercio\\test_comercio\\WCom-NetCore\\WCom-NetCore.csproj",
       "projectName": "WCom-NetCore",
-      "projectPath": "D:\\MOISES\\TRABAJO\\METRICA\\Examen\\test_comercio\\test_comercio\\WCom-NetCore\\WCom-NetCore.csproj",
-      "packagesPath": "C:\\Users\\MOISESHR\\.nuget\\packages\\",
-      "outputPath": "D:\\MOISES\\TRABAJO\\METRICA\\Examen\\test_comercio\\test_comercio\\WCom-NetCore\\obj\\",
+      "projectPath": "E:\\mhr\\METRICA\\Examen\\test_comercio\\test_comercio\\WCom-NetCore\\WCom-NetCore.csproj",
+      "packagesPath": "C:\\Users\\usrprdsolnegmo\\.nuget\\packages\\",
+      "outputPath": "E:\\mhr\\METRICA\\Examen\\test_comercio\\test_comercio\\WCom-NetCore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\MOISESHR\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\usrprdsolnegmo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

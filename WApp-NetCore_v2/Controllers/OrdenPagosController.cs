@@ -7,7 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WApp_NetCore_v2.Data;
-using WApp_NetCore_v2.Models;
+//using WApp_NetCore_v2.Models;
+using WBE_NetCore.Models;
+using WBL_NetCore.Logic;
 
 namespace WApp_NetCore_v2.Controllers
 {
@@ -22,10 +24,88 @@ namespace WApp_NetCore_v2.Controllers
         }
 
         // GET: OrdenPagos
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            return View(await _context.OrdenPago.ToListAsync());
+            OrdenPagoLogic objDA = new OrdenPagoLogic();
+            List<OrdenPago> result = new List<OrdenPago>();
+            result = objDA.ListarAll();
+
+            return View(result);
+            //return View(await _context.OrdenPago.ToListAsync());
         }
+
+        public async Task<IActionResult> Registro(int id = 0)
+        {
+            List<SelectListItem> ListSucursales = new List<SelectListItem>();
+            ListSucursales.Add(new SelectListItem
+            {
+                Text = "Selecciona",
+                Value = ""
+            });
+            var lista = await _context.Sucursales.ToListAsync();
+            foreach (var item in lista)
+            {
+                ListSucursales.Add(new SelectListItem
+                {
+                    Text = item.nombre,
+                    Value = item.ID.ToString()
+                });
+            }
+            ViewBag.ListSucursales = ListSucursales;
+
+            if (id == 0)
+                return View(new OrdenPago());
+            else
+            {
+                OrdenPagoLogic objDA = new OrdenPagoLogic();
+                OrdenPago result = new OrdenPago();
+                result = objDA.GetReg(id);
+                if (result == null)
+                {
+                    return View(new OrdenPago());
+                }
+                else
+                {
+                    return View(result);
+                }
+            }
+
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Registro([Bind("ID,sucursal_id,monto,moneda,estado,fecha_pago")] OrdenPago _banco)
+        {
+            if (ModelState.IsValid)
+            {
+                OrdenPago result = new OrdenPago();
+
+                int res = 0;
+                if (_banco.ID == 0)
+                    res = OrdenPagoLogic.Registrar(_banco);
+                else
+                    res = OrdenPagoLogic.Actualizar(_banco);
+                return RedirectToAction(nameof(Index));
+            }
+            return View(_banco);
+        }
+        public IActionResult Eliminar(int id)
+        {
+            try
+            {
+                // TODO: Add delete logic here
+                var res = OrdenPagoLogic.Eliminar(id);
+
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+
+
+
 
         // GET: OrdenPagos/Details/5
         public async Task<IActionResult> Details(int? id)

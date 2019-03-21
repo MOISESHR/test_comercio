@@ -1,0 +1,14 @@
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\WBL_NetCore\bin\Debug\netcoreapp2.0\WBL_NetCore.deps.json
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\WBL_NetCore\bin\Debug\netcoreapp2.0\WBL_NetCore.dll
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\WBL_NetCore\bin\Debug\netcoreapp2.0\WBL_NetCore.pdb
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\WBL_NetCore\obj\Debug\netcoreapp2.0\WBL_NetCore.csprojAssemblyReference.cache
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\WBL_NetCore\obj\Debug\netcoreapp2.0\WBL_NetCore.csproj.CoreCompileInputs.cache
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\WBL_NetCore\obj\Debug\netcoreapp2.0\WBL_NetCore.AssemblyInfoInputs.cache
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\WBL_NetCore\obj\Debug\netcoreapp2.0\WBL_NetCore.AssemblyInfo.cs
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\WBL_NetCore\obj\Debug\netcoreapp2.0\WBL_NetCore.dll
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\WBL_NetCore\obj\Debug\netcoreapp2.0\WBL_NetCore.pdb
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\WBL_NetCore\bin\Debug\netcoreapp2.0\WBE_NetCore.dll
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\WBL_NetCore\bin\Debug\netcoreapp2.0\WDA_NetCore.dll
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\WBL_NetCore\bin\Debug\netcoreapp2.0\WBE_NetCore.pdb
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\WBL_NetCore\bin\Debug\netcoreapp2.0\WDA_NetCore.pdb
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\WBL_NetCore\obj\Debug\netcoreapp2.0\WBL_NetCore.csproj.CopyComplete

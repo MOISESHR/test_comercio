@@ -7,6 +7,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WApp_NetCore_v2", "WApp-Net
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WCom-NetCore", "WCom-NetCore\WCom-NetCore.csproj", "{1CD198B9-9800-4490-91E0-665C6F2D7B5A}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WAPI_NetCore", "WAPI_NetCore\WAPI_NetCore.csproj", "{DC8F890F-B235-4982-8E6E-5A6810CCB8E1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WDA_NetCore", "WDA_NetCore\WDA_NetCore.csproj", "{DFCA74E5-0146-48E6-94BE-E803A08FD5A5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{55EB9539-1BA5-485F-946C-A21AAB002DCD} = {55EB9539-1BA5-485F-946C-A21AAB002DCD}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WBE_NetCore", "WBE_NetCore\WBE_NetCore.csproj", "{55EB9539-1BA5-485F-946C-A21AAB002DCD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WBL_NetCore", "WBL_NetCore\WBL_NetCore.csproj", "{09AB1ECE-0F13-4BA6-AC39-B70B4B208D66}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +32,22 @@ Global
 		{1CD198B9-9800-4490-91E0-665C6F2D7B5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CD198B9-9800-4490-91E0-665C6F2D7B5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CD198B9-9800-4490-91E0-665C6F2D7B5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC8F890F-B235-4982-8E6E-5A6810CCB8E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC8F890F-B235-4982-8E6E-5A6810CCB8E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC8F890F-B235-4982-8E6E-5A6810CCB8E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC8F890F-B235-4982-8E6E-5A6810CCB8E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFCA74E5-0146-48E6-94BE-E803A08FD5A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFCA74E5-0146-48E6-94BE-E803A08FD5A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFCA74E5-0146-48E6-94BE-E803A08FD5A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFCA74E5-0146-48E6-94BE-E803A08FD5A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55EB9539-1BA5-485F-946C-A21AAB002DCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55EB9539-1BA5-485F-946C-A21AAB002DCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55EB9539-1BA5-485F-946C-A21AAB002DCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55EB9539-1BA5-485F-946C-A21AAB002DCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09AB1ECE-0F13-4BA6-AC39-B70B4B208D66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09AB1ECE-0F13-4BA6-AC39-B70B4B208D66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09AB1ECE-0F13-4BA6-AC39-B70B4B208D66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09AB1ECE-0F13-4BA6-AC39-B70B4B208D66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
