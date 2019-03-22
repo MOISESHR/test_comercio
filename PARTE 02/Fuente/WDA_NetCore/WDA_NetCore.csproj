@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.3" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.4" PrivateAssets="All" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\WBE_NetCore\WBE_NetCore.csproj" />
+    <ProjectReference Include="..\WCom-NetCore\WCom-NetCore.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="DataAccess\Oracle\" />
+  </ItemGroup>
+
+</Project>

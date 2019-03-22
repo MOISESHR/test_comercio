@@ -1,9 +1,0 @@
-E:\mhr\METRICA\Examen\test_comercio\test_comercio\WBE_NetCore\bin\Debug\netcoreapp2.0\WBE_NetCore.deps.json
-E:\mhr\METRICA\Examen\test_comercio\test_comercio\WBE_NetCore\bin\Debug\netcoreapp2.0\WBE_NetCore.dll
-E:\mhr\METRICA\Examen\test_comercio\test_comercio\WBE_NetCore\bin\Debug\netcoreapp2.0\WBE_NetCore.pdb
-E:\mhr\METRICA\Examen\test_comercio\test_comercio\WBE_NetCore\obj\Debug\netcoreapp2.0\WBE_NetCore.csprojAssemblyReference.cache
-E:\mhr\METRICA\Examen\test_comercio\test_comercio\WBE_NetCore\obj\Debug\netcoreapp2.0\WBE_NetCore.csproj.CoreCompileInputs.cache
-E:\mhr\METRICA\Examen\test_comercio\test_comercio\WBE_NetCore\obj\Debug\netcoreapp2.0\WBE_NetCore.AssemblyInfoInputs.cache
-E:\mhr\METRICA\Examen\test_comercio\test_comercio\WBE_NetCore\obj\Debug\netcoreapp2.0\WBE_NetCore.AssemblyInfo.cs
-E:\mhr\METRICA\Examen\test_comercio\test_comercio\WBE_NetCore\obj\Debug\netcoreapp2.0\WBE_NetCore.dll
-E:\mhr\METRICA\Examen\test_comercio\test_comercio\WBE_NetCore\obj\Debug\netcoreapp2.0\WBE_NetCore.pdb

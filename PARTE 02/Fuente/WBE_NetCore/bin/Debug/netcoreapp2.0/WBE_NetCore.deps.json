@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.0",
+    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.0": {
+      "WBE_NetCore/1.0.0": {
+        "dependencies": {
+          "WCom-NetCore": "1.0.0"
+        },
+        "runtime": {
+          "WBE_NetCore.dll": {}
+        }
+      },
+      "WCom-NetCore/1.0.0": {
+        "runtime": {
+          "WCom-NetCore.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WBE_NetCore/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WCom-NetCore/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

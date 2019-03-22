@@ -1,0 +1,64 @@
+﻿@model WBE_NetCore.Models.OrdenPago
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+<h4>OrdenPago</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="sucursal_id" class="control-label"></label>
+                <select asp-for="sucursal_id" asp-items="ViewBag.ListSucursales" class="form-control" ></select>
+                <span asp-validation-for="sucursal_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="monto" class="control-label"></label>
+                <input asp-for="monto" class="form-control" />
+                <span asp-validation-for="monto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="moneda" class="control-label"></label>
+                <select asp-for="moneda" class="form-control">
+                    <option selected value=""></option>
+                    <option value="Soles">Soles</option>
+                    <option value="Dolares">Dolares</option>
+                </select>
+                <span asp-validation-for="moneda" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="estado" class="control-label"></label>
+                <select asp-for="estado" class="form-control">
+                    <option selected value=""></option>
+                    <option value="Pagada">Pagada</option>
+                    <option value="Declinada">Declinada</option>
+                    <option value="Fallida">Fallida</option>
+                    <option value="Anulada">Anulada</option>
+                </select>
+                <span asp-validation-for="estado" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fecha_pago" class="control-label"></label>
+                <input asp-for="fecha_pago" class="form-control" />
+                <span asp-validation-for="fecha_pago" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
