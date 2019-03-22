@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using WApp_NetCore_v2.Data;
 using WApp_NetCore_v2.Models;
 using WApp_NetCore_v2.Services;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace WApp_NetCore_v2
 {
@@ -40,13 +41,27 @@ namespace WApp_NetCore_v2
                     options.Password.RequireUppercase = false;
 
                     options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);		//TIEMPO DURACION 5 minutos
-                    //options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromSeconds(5);		//TIEMPO DURACION 5 minutos
+                    options.Lockout.MaxFailedAccessAttempts = 5;
+                    options.Lockout.AllowedForNewUsers = true;
 
                     options.User.RequireUniqueEmail = true;
 
             })
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
+
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.AccessDeniedPath = "/Account/AccessDenied";
+                options.Cookie.Name = "AppCookieMHR";
+                options.Cookie.HttpOnly = true;
+                options.ExpireTimeSpan = TimeSpan.FromSeconds(300);
+                options.LoginPath = "/Account/Login";
+                // ReturnUrlParameter requires 
+                //using Microsoft.AspNetCore.Authentication.Cookies;
+                options.ReturnUrlParameter = CookieAuthenticationDefaults.ReturnUrlParameter;
+                options.SlidingExpiration = true;
+            });
 
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();

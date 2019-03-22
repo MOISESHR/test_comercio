@@ -62,3 +62,24 @@ D:\MOISES\TRABAJO\METRICA\Examen\test_comercio\test_comercio\Fuente\WApp-NetCore
 D:\MOISES\TRABAJO\METRICA\Examen\test_comercio\test_comercio\Fuente\WApp-NetCore_v2\obj\Debug\netcoreapp2.0\WApp_NetCore_v2.pdb
 D:\MOISES\TRABAJO\METRICA\Examen\test_comercio\test_comercio\Fuente\WApp-NetCore_v2\bin\Debug\netcoreapp2.0\WCom-NetCore.dll
 D:\MOISES\TRABAJO\METRICA\Examen\test_comercio\test_comercio\Fuente\WApp-NetCore_v2\bin\Debug\netcoreapp2.0\WCom-NetCore.pdb
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WApp-NetCore_v2\bin\Debug\netcoreapp2.0\WApp_NetCore_v2.deps.json
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WApp-NetCore_v2\bin\Debug\netcoreapp2.0\WApp_NetCore_v2.runtimeconfig.json
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WApp-NetCore_v2\bin\Debug\netcoreapp2.0\WApp_NetCore_v2.runtimeconfig.dev.json
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WApp-NetCore_v2\bin\Debug\netcoreapp2.0\WApp_NetCore_v2.dll
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WApp-NetCore_v2\bin\Debug\netcoreapp2.0\WApp_NetCore_v2.pdb
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WApp-NetCore_v2\bin\Debug\netcoreapp2.0\WBE_NetCore.dll
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WApp-NetCore_v2\bin\Debug\netcoreapp2.0\WBL_NetCore.dll
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WApp-NetCore_v2\bin\Debug\netcoreapp2.0\WCom-NetCore.dll
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WApp-NetCore_v2\bin\Debug\netcoreapp2.0\WDA_NetCore.dll
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WApp-NetCore_v2\bin\Debug\netcoreapp2.0\WBE_NetCore.pdb
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WApp-NetCore_v2\bin\Debug\netcoreapp2.0\WBL_NetCore.pdb
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WApp-NetCore_v2\bin\Debug\netcoreapp2.0\WCom-NetCore.pdb
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WApp-NetCore_v2\bin\Debug\netcoreapp2.0\WDA_NetCore.pdb
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WApp-NetCore_v2\obj\Debug\netcoreapp2.0\WApp_NetCore_v2.csprojAssemblyReference.cache
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WApp-NetCore_v2\obj\Debug\netcoreapp2.0\WApp_NetCore_v2.csproj.CoreCompileInputs.cache
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WApp-NetCore_v2\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WApp-NetCore_v2\obj\Debug\netcoreapp2.0\WApp_NetCore_v2.AssemblyInfoInputs.cache
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WApp-NetCore_v2\obj\Debug\netcoreapp2.0\WApp_NetCore_v2.AssemblyInfo.cs
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WApp-NetCore_v2\obj\Debug\netcoreapp2.0\WApp_NetCore_v2.csproj.CopyComplete
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WApp-NetCore_v2\obj\Debug\netcoreapp2.0\WApp_NetCore_v2.dll
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WApp-NetCore_v2\obj\Debug\netcoreapp2.0\WApp_NetCore_v2.pdb

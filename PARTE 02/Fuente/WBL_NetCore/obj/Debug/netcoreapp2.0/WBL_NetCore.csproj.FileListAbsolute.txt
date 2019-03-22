@@ -28,3 +28,19 @@ D:\MOISES\TRABAJO\METRICA\Examen\test_comercio\test_comercio\Fuente\WBL_NetCore\
 D:\MOISES\TRABAJO\METRICA\Examen\test_comercio\test_comercio\Fuente\WBL_NetCore\obj\Debug\netcoreapp2.0\WBL_NetCore.pdb
 D:\MOISES\TRABAJO\METRICA\Examen\test_comercio\test_comercio\Fuente\WBL_NetCore\bin\Debug\netcoreapp2.0\WCom-NetCore.dll
 D:\MOISES\TRABAJO\METRICA\Examen\test_comercio\test_comercio\Fuente\WBL_NetCore\bin\Debug\netcoreapp2.0\WCom-NetCore.pdb
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WBL_NetCore\bin\Debug\netcoreapp2.0\WBL_NetCore.deps.json
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WBL_NetCore\bin\Debug\netcoreapp2.0\WBL_NetCore.dll
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WBL_NetCore\bin\Debug\netcoreapp2.0\WBL_NetCore.pdb
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WBL_NetCore\bin\Debug\netcoreapp2.0\WBE_NetCore.dll
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WBL_NetCore\bin\Debug\netcoreapp2.0\WCom-NetCore.dll
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WBL_NetCore\bin\Debug\netcoreapp2.0\WDA_NetCore.dll
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WBL_NetCore\bin\Debug\netcoreapp2.0\WBE_NetCore.pdb
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WBL_NetCore\bin\Debug\netcoreapp2.0\WDA_NetCore.pdb
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WBL_NetCore\bin\Debug\netcoreapp2.0\WCom-NetCore.pdb
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WBL_NetCore\obj\Debug\netcoreapp2.0\WBL_NetCore.csprojAssemblyReference.cache
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WBL_NetCore\obj\Debug\netcoreapp2.0\WBL_NetCore.csproj.CoreCompileInputs.cache
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WBL_NetCore\obj\Debug\netcoreapp2.0\WBL_NetCore.AssemblyInfoInputs.cache
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WBL_NetCore\obj\Debug\netcoreapp2.0\WBL_NetCore.AssemblyInfo.cs
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WBL_NetCore\obj\Debug\netcoreapp2.0\WBL_NetCore.csproj.CopyComplete
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WBL_NetCore\obj\Debug\netcoreapp2.0\WBL_NetCore.dll
+E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WBL_NetCore\obj\Debug\netcoreapp2.0\WBL_NetCore.pdb
