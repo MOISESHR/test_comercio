@@ -64,7 +64,11 @@ namespace WApp_NetCore_v2.Controllers
                 BancoRespuesta result = new BancoRespuesta();
 
                 if (_banco.ID == 0)
+                {
                     result = BancoLogic.Registrar(_banco);
+                    //result = BancoService.Registrar(_banco);
+
+                }                    
                 else
                     result = BancoLogic.Actualizar(_banco);
 
