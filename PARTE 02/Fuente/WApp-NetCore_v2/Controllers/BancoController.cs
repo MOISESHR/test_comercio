@@ -65,12 +65,16 @@ namespace WApp_NetCore_v2.Controllers
 
                 if (_banco.ID == 0)
                 {
-                    result = BancoLogic.Registrar(_banco);
-                    //result = BancoService.Registrar(_banco);
+                    //result = BancoLogic.Registrar(_banco);
+                    result = BancoService.Registrar(_banco);
 
-                }                    
+                }
                 else
-                    result = BancoLogic.Actualizar(_banco);
+                {
+                    //result = BancoLogic.Actualizar(_banco);
+                    result = BancoService.Actualizar(_banco);
+                }
+                    
 
                 return RedirectToAction(nameof(Index));
             }
@@ -80,7 +84,8 @@ namespace WApp_NetCore_v2.Controllers
         {
             try
             {
-                var res = BancoLogic.Eliminar(id);
+                //var res = BancoLogic.Eliminar(id);
+                var res = BancoService.Eliminar(id);
 
                 return RedirectToAction(nameof(Index));
             }

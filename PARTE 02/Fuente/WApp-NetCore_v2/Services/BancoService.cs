@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -141,7 +142,7 @@ namespace WApp_NetCore_v2.Services
                 var obj = Newtonsoft.Json.JsonConvert.DeserializeObject(data);
                 var f = Newtonsoft.Json.JsonConvert.SerializeObject(obj, Newtonsoft.Json.Formatting.Indented);
 
-                JObject rss = JObject.Parse(f);
+                var rss = JObject.Parse(f);
 
                 var objeto = rss["entidad"].Count();
                 Banco _entidad = new Banco();
@@ -171,7 +172,9 @@ namespace WApp_NetCore_v2.Services
 
             List<Banco> objLista = new List<Banco>();
             String url = "http://localhost:35846/api/Banco/Registrar";
-            String param = "ID=" + oBe.ID.ToString() + "&nombre=" + oBe.nombre + "&direccion=" + oBe.direccion + "&fecha_registro=" + oBe.fecha_registro.ToString();
+            //String param = "ID=" + oBe.ID.ToString() + "&nombre=" + oBe.nombre + "&direccion=" + oBe.direccion + "&fecha_registro=" + oBe.fecha_registro.ToString();
+
+            var jsonPatientList = JsonConvert.SerializeObject(oBe);
 
             WebClient webClient = new WebClient();
             webClient.UseDefaultCredentials = true;
@@ -186,14 +189,14 @@ namespace WApp_NetCore_v2.Services
             {
                 ServicePointManager.ServerCertificateValidationCallback = new RemoteCertificateValidationCallback(ValidateServerCertificate);
 
-                //var method = "POST"; // If your endpoint expects a GET then do it.
+                var method = "POST"; // If your endpoint expects a GET then do it.
                 //var parameters = new NameValueCollection();
                 //parameters.Add("ID", oBe.ID.ToString());
                 //parameters.Add("nombre", oBe.nombre);
                 //parameters.Add("direccion", oBe.direccion);
                 //parameters.Add("fecha_registro", oBe.fecha_registro.ToString());
 
-                var data = webClient.UploadString(url, param);
+                var data = webClient.UploadString(url, method, jsonPatientList);
                 //var data = webClient.UploadValues(url, method, parameters);
                 //// Parse the returned data (if any) if needed.
                 //var responseString = UnicodeEncoding.UTF8.GetString(data);
@@ -232,9 +235,15 @@ namespace WApp_NetCore_v2.Services
 
             try
             {
+                var jsonPatientList = JsonConvert.SerializeObject(oBe);
+
                 ServicePointManager.ServerCertificateValidationCallback = new RemoteCertificateValidationCallback(ValidateServerCertificate);
 
-                var data = webClient.DownloadString(url);
+                //var data = webClient.DownloadString(url);
+                //var data = webClient.UploadString(url, jsonPatientList);
+
+                var data = webClient.UploadString(url, "PUT", jsonPatientList);
+
 
                 var obj = Newtonsoft.Json.JsonConvert.DeserializeObject(data);
                 var f = Newtonsoft.Json.JsonConvert.SerializeObject(obj, Newtonsoft.Json.Formatting.Indented);
@@ -259,7 +268,7 @@ namespace WApp_NetCore_v2.Services
             BancoRespuesta objResponse = new BancoRespuesta();
 
             List<Banco> objLista = new List<Banco>();
-            String url = "http://localhost:35846/api/Banco/Eliminar";
+            String url = "http://localhost:35846/api/Banco/Eliminar/" + ID.ToString();
 
             WebClient webClient = new WebClient();
             webClient.UseDefaultCredentials = true;
@@ -278,19 +287,7 @@ namespace WApp_NetCore_v2.Services
                 var f = Newtonsoft.Json.JsonConvert.SerializeObject(obj, Newtonsoft.Json.Formatting.Indented);
 
                 JObject rss = JObject.Parse(f);
-
-                for (int i = 0; i < rss["lista"].Count(); i++)
-                {
-                    var _entidad = new Banco
-                    {
-                        ID = (int)rss["lista"][i]["id"],
-                        nombre = (string)rss["lista"][i]["nombre"],
-                        direccion = (string)rss["lista"][i]["direccion"],
-                        fecha_registro = (DateTime)rss["lista"][i]["fecha_registro"]
-                    };
-                    objLista.Add(_entidad);
-                }
-
+                
                 oDTOHeader.CodigoOK_WS = Constantes.Exito.Ok;
             }
             catch (Exception ex)

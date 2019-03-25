@@ -31,3 +31,15 @@ E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WBE_NetCore\ob
 E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WBE_NetCore\obj\Debug\netcoreapp2.0\WBE_NetCore.csproj.CopyComplete
 E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WBE_NetCore\obj\Debug\netcoreapp2.0\WBE_NetCore.dll
 E:\mhr\METRICA\Examen\test_comercio\test_comercio\PARTE 02\Fuente\WBE_NetCore\obj\Debug\netcoreapp2.0\WBE_NetCore.pdb
+D:\MOISES\DEVELOPER\ASPNETCORE\GIT\test_comercio\PARTE 02\Fuente\WBE_NetCore\bin\Debug\netcoreapp2.0\WBE_NetCore.deps.json
+D:\MOISES\DEVELOPER\ASPNETCORE\GIT\test_comercio\PARTE 02\Fuente\WBE_NetCore\bin\Debug\netcoreapp2.0\WBE_NetCore.dll
+D:\MOISES\DEVELOPER\ASPNETCORE\GIT\test_comercio\PARTE 02\Fuente\WBE_NetCore\bin\Debug\netcoreapp2.0\WBE_NetCore.pdb
+D:\MOISES\DEVELOPER\ASPNETCORE\GIT\test_comercio\PARTE 02\Fuente\WBE_NetCore\bin\Debug\netcoreapp2.0\WCom-NetCore.dll
+D:\MOISES\DEVELOPER\ASPNETCORE\GIT\test_comercio\PARTE 02\Fuente\WBE_NetCore\bin\Debug\netcoreapp2.0\WCom-NetCore.pdb
+D:\MOISES\DEVELOPER\ASPNETCORE\GIT\test_comercio\PARTE 02\Fuente\WBE_NetCore\obj\Debug\netcoreapp2.0\WBE_NetCore.csprojAssemblyReference.cache
+D:\MOISES\DEVELOPER\ASPNETCORE\GIT\test_comercio\PARTE 02\Fuente\WBE_NetCore\obj\Debug\netcoreapp2.0\WBE_NetCore.csproj.CoreCompileInputs.cache
+D:\MOISES\DEVELOPER\ASPNETCORE\GIT\test_comercio\PARTE 02\Fuente\WBE_NetCore\obj\Debug\netcoreapp2.0\WBE_NetCore.AssemblyInfoInputs.cache
+D:\MOISES\DEVELOPER\ASPNETCORE\GIT\test_comercio\PARTE 02\Fuente\WBE_NetCore\obj\Debug\netcoreapp2.0\WBE_NetCore.AssemblyInfo.cs
+D:\MOISES\DEVELOPER\ASPNETCORE\GIT\test_comercio\PARTE 02\Fuente\WBE_NetCore\obj\Debug\netcoreapp2.0\WBE_NetCore.csproj.CopyComplete
+D:\MOISES\DEVELOPER\ASPNETCORE\GIT\test_comercio\PARTE 02\Fuente\WBE_NetCore\obj\Debug\netcoreapp2.0\WBE_NetCore.dll
+D:\MOISES\DEVELOPER\ASPNETCORE\GIT\test_comercio\PARTE 02\Fuente\WBE_NetCore\obj\Debug\netcoreapp2.0\WBE_NetCore.pdb
